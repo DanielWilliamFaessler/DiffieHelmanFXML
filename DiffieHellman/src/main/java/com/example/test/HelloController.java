@@ -9,6 +9,6 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Here comes the randomly generated primnumber");
+        welcomeText.setText("Welcome to JavaFX Application!");
     }
 }
