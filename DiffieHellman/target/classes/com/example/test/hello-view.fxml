@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.DiffieController">
    <children>
       <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="313.0" prefWidth="200.0" text="Alice">
@@ -48,8 +47,8 @@
          <content>
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
-                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onGenBButtonClick" text="Button" />
+                  <Label fx:id="PrimeBText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label">
                      <VBox.margin>
                         <Insets top="100.0" />
                      </VBox.margin>
