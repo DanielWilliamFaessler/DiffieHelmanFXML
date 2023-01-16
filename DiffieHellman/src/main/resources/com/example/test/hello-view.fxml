@@ -22,15 +22,15 @@
                               <Insets bottom="20.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <TextField />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Send">
+                        <TextField fx:id="privateA" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendPA" text="Send private Key">
                            <VBox.margin>
                               <Insets bottom="50.0" top="100.0" />
                            </VBox.margin>
                         </Button>
                      </children>
                   </VBox>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onGenAButtonClick" text="Generate Private Keys" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onGenAButtonClick" text="Generate Public Keys" />
                   <Label fx:id="PrimeAText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                      <VBox.margin>
                         <Insets bottom="50.0" top="100.0" />
@@ -44,7 +44,7 @@
          <content>
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
-                  <TextArea>
+                  <TextArea fx:id="Log">
                      <VBox.margin>
                         <Insets top="50.0" />
                      </VBox.margin>
@@ -64,14 +64,14 @@
                               <Insets bottom="20.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <TextField>
+                        <TextField fx:id="privateB">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </TextField>
                      </children>
                   </VBox>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Send">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendPB" text="Send private Key">
                      <VBox.margin>
                         <Insets bottom="80.0" />
                      </VBox.margin>
