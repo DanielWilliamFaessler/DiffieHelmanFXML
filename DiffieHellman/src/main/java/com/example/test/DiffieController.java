@@ -22,6 +22,8 @@ public class DiffieController {
     private int kb; //public key Bob
     private int a;
     private int b;
+    private int kab; //public shared Key
+    private int kba; //public shared key
     private ArrayList<Integer> publicKeys = new ArrayList<>();
 
 
@@ -93,17 +95,29 @@ public class DiffieController {
         BigInteger moddedb = poweredb.mod(BigInteger.valueOf(p));
         ka = Integer.parseInt(moddeda + "");
         kb = Integer.parseInt(moddedb + "");
+        BigInteger finalApow = moddedb.pow(a);
+        BigInteger finalA = finalApow.mod(BigInteger.valueOf(p));
+        BigInteger finalBpow = moddeda.pow(b);
+        BigInteger finalB = finalBpow.mod(BigInteger.valueOf(p));
+        kab = Integer.parseInt(finalA + "");
+        kba = Integer.parseInt(finalB + "");
         System.out.println(" ");
         System.out.println(p);
         System.out.println(g);
         System.out.println(ka);
         System.out.println(kb);
+        System.out.println(kab);
+        System.out.println();
     }
 
     @FXML
     private Label PrimeAText;
     @FXML
     private Label PrimeBText;
+    @FXML
+    private Label Shared1Text;
+    @FXML
+    private Label Shared2Text;
     @FXML
     private TextArea Log;
 
@@ -115,6 +129,8 @@ public class DiffieController {
         genKeys(); // generate Keys
         publicKeys.add(ka);
         publicKeys.add(kb);
+        publicKeys.add(kab);
+        publicKeys.add(kba);
     }
 
     @FXML
@@ -141,6 +157,8 @@ public class DiffieController {
         generateKeys();
         PrimeAText.setText("Here comes Public KeyA: " + publicKeys.get(0));
         PrimeBText.setText("Here comes Public KeyB: " + publicKeys.get(1));
+        Shared1Text.setText("Here comes shared secret: "+publicKeys.get(2));
+        Shared2Text.setText("Here comes shared secret: "+publicKeys.get(3));
         Log.setText(
                 Log.getText()
                         + "System generates Primenumber for modulo calculation -> 'p' : "+p+"\n"
@@ -157,6 +175,11 @@ public class DiffieController {
                 Log.getText() + "\n \n"
                         + "Alice sends her public Key A: " + publicKeys.get(0)+"\n"
                         + "Bob sends his public Key B: " + publicKeys.get(1)
+        );
+        Log.setText(
+                Log.getText() + "Private: \n \n"
+                        + "Alice calculates shared secret: " + publicKeys.get(2)+"\n"
+                        + "Bob calculates shared secret: " + publicKeys.get(3)
         );
     }
 

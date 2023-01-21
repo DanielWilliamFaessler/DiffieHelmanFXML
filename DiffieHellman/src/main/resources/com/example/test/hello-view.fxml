@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.DiffieController">
+<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.DiffieController">
    <children>
       <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="313.0" prefWidth="200.0" text="Alice">
          <content>
@@ -36,6 +36,7 @@
                         <Insets bottom="50.0" top="100.0" />
                      </VBox.margin>
                   </Label>
+                  <Label fx:id="Shared1Text" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
                </children>
             </VBox>
          </content>
@@ -81,6 +82,7 @@
                         <Insets bottom="50.0" top="100.0" />
                      </VBox.margin>
                   </Label>
+                  <Label fx:id="Shared2Text" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
                </children>
             </VBox>
          </content>
